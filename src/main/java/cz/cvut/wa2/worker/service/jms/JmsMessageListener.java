@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -63,7 +64,7 @@ public class JmsMessageListener {
                     }
                 }
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             //nothing
             e.printStackTrace();
         }
